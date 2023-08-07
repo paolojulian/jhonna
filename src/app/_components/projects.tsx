@@ -1,8 +1,9 @@
 import SectionHeading from '@/_components/common/section-heading';
 import Row from '@/_components/layouts/row';
 import Stack from '@/_components/layouts/stack';
+import { useScroll } from '@/_context/ScrollContext';
 import Image from 'next/image';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useRef } from 'react';
 
 export type ProjectsSectionProps = {
   // no props
@@ -22,7 +23,9 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
                   layout='fill'
                   src={'/assets/hotel-booking.png'}
                   alt={'Hotel Booking and Reservation'}
-                  objectFit='cover'
+                  style={{
+                    objectFit: 'cover',
+                  }}
                 />
               </div>
 
@@ -61,7 +64,9 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
                   layout='fill'
                   src={'/assets/landing.png'}
                   alt={'Landing Page and Blogsite'}
-                  objectFit='cover'
+                  style={{
+                    objectFit: 'cover',
+                  }}
                 />
               </div>
             </div>

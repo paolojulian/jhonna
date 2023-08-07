@@ -2,8 +2,6 @@ import classNames from 'classnames';
 import './globals.css';
 import type { Metadata } from 'next';
 import { DM_Mono, Inconsolata, Poppins } from 'next/font/google';
-import Menu from '@/_components/layouts/menu';
-import ContactSection from './_components/contact';
 
 const inconsolata = Inconsolata({
   subsets: ['latin'],
@@ -40,21 +38,7 @@ export default function RootLayout({
           'bg-bg text-black-secondary h-full max-w-screen overflow-x-hidden'
         )}
       >
-        {/* sidenav-web */}
-        <header className='hidden md:flex flex-col h-screen top-0 left-0 md:w-sidenav-md lg:w-sidenav-lg xl:w-sidenav-xl 2xl:w-sidenav fixed z-0'>
-          <Menu />
-        </header>
-
-        {/* sidenav-mobile */}
-        <header className='fixed md:hidden flex-col h-screen top-4 right-4 md:w-sidenav-md lg:w-sidenav-lg xl:w-sidenav-xl 2xl:w-sidenav z-50'>
-          <Menu variant='mobile' />
-        </header>
-
-        <div className='mx-auto flex flex-row relative font-inconsolata h-full md:ml-sidenav-md lg:ml-sidenav-lg xl:ml-sidenav-xl 2xl:ml-sidenav'>
-          {/*  */}
-          <main className='flex-1'>{children}</main>
-        </div>
-        <ContactSection />
+        {children}
       </body>
     </html>
   );

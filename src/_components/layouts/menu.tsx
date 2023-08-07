@@ -10,6 +10,7 @@ import MailIcon from '../icons/mail-icon';
 import PhoneIcon from '../icons/phone-icon';
 import MenuIcon from '../icons/menu-icon';
 import CloseIcon from '../icons/close-icon';
+import { useScroll } from '@/_context/ScrollContext';
 
 type Variants = 'web' | 'mobile';
 
@@ -66,7 +67,7 @@ const Menu: FunctionComponent<MenuProps> = ({ variant = 'web' }) => {
     setIsOpen((prev) => !prev);
   };
 
-  const pathname = usePathname();
+  const { activeSection } = useScroll();
 
   return (
     <>
@@ -82,10 +83,26 @@ const Menu: FunctionComponent<MenuProps> = ({ variant = 'web' }) => {
 
         <nav className='flex-1 flex flex-col justify-center'>
           <ul className='flex flex-col space-y-5'>
-            <WebLink href={'#hero'} name='home' isActive />
-            <WebLink href={'#about'} name='about' isActive={false} />
-            <WebLink href={'#portfolio'} name='portfolio' isActive={false} />
-            <WebLink href={'#contact'} name='get in touch' isActive={false} />
+            <WebLink
+              href={'#hero'}
+              name='home'
+              isActive={activeSection === 'hero'}
+            />
+            <WebLink
+              href={'#about'}
+              name='about'
+              isActive={activeSection === 'about'}
+            />
+            <WebLink
+              href={'#portfolio'}
+              name='portfolio'
+              isActive={activeSection === 'portfolio'}
+            />
+            <WebLink
+              href={'#contact'}
+              name='get in touch'
+              isActive={activeSection === 'contact'}
+            />
           </ul>
         </nav>
 
@@ -150,17 +167,25 @@ const Menu: FunctionComponent<MenuProps> = ({ variant = 'web' }) => {
                 className='w-full text-right flex flex-col justify-center space-y-5 flex-1 py-12 px-4'
                 onClick={handleToggleMenu}
               >
-                <MobileLink href={'#hero'} name='home' isActive />
-                <MobileLink href={'#about'} name='about' isActive={false} />
+                <MobileLink
+                  href={'#hero'}
+                  name='home'
+                  isActive={activeSection === 'hero'}
+                />
+                <MobileLink
+                  href={'#about'}
+                  name='about'
+                  isActive={activeSection === 'about'}
+                />
                 <MobileLink
                   href={'#portfolio'}
                   name='portfolio'
-                  isActive={false}
+                  isActive={activeSection === 'portfolio'}
                 />
                 <MobileLink
                   href={'#contact'}
                   name='get in touch'
-                  isActive={false}
+                  isActive={activeSection === 'contact'}
                 />
               </ul>
               <Row className='space-x-4 justify-end'>
