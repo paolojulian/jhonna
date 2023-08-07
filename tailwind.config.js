@@ -17,7 +17,7 @@ module.exports = {
         'bg-secondary': '#FAD4C0',
         black: '#030712',
         'black-secondary': '#111827',
-        'black-light': '#11182790',
+        'black-light': '#111827bb',
         accent: '#64b6ac',
       },
       backgroundImage: {

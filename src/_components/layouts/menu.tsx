@@ -21,7 +21,6 @@ const WebLink: FunctionComponent<
       className={classNames(
         'w-[250px] flex flex-col justify-center items-start py-1 font-medium text-lg',
         'group',
-        'font-poppins',
         'border-b',
         isActive ? 'border-accent text-accent' : 'border-transparent'
       )}

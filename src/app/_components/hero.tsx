@@ -36,6 +36,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
       }
     };
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -43,7 +44,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
 
   return (
     <>
-      <div className='fixed w-3/5 h-screen right-0 top-12 -z-20 overflow-hidden pointer-events-none'>
+      <div className='fixed w-3/5 h-screen right-0 top-24 -z-20 overflow-hidden pointer-events-none'>
         <DotGrid gridGap={30} dotColor={'#11182720'} />
       </div>
       <section
@@ -53,9 +54,9 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
         <Stack className='items-center flex-1'>
           <h1
             ref={logoRef}
-            className='font-dm-mono font-medium text-[200px] leading-[200px] -z-10'
+            className='font-dm-mono font-medium text-[200px] leading-[200px] tracking-[-20px] -z-10'
           >
-            jhonna.
+            jhonn<span className='tracking-[-40px]'>a</span>.
           </h1>
           <p ref={professionRef} className='font-poppins text-2xl -z-10'>
             UI UX Designer
