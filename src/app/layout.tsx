@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { DM_Mono, Inconsolata, Poppins } from 'next/font/google';
 import Menu from '@/_components/layouts/menu';
+import ContactSection from './_components/contact';
 
 const inconsolata = Inconsolata({
   subsets: ['latin'],
@@ -39,14 +40,15 @@ export default function RootLayout({
           'bg-bg text-black-secondary h-full'
         )}
       >
-        <div className='mx-auto flex flex-row relative font-inconsolata h-full'>
-          {/* sidenav */}
-          <header className='flex flex-col h-screen sticky top-0 w-sidenav'>
-            <Menu />
-          </header>
+        {/* sidenav */}
+        <header className='flex flex-col h-screen top-0 left-0 w-sidenav fixed -z-10'>
+          <Menu />
+        </header>
+        <div className='mx-auto flex flex-row relative font-inconsolata h-full ml-sidenav'>
           {/*  */}
           <main className='flex-1'>{children}</main>
         </div>
+        <ContactSection />
       </body>
     </html>
   );

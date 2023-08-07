@@ -4,16 +4,22 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        sidenav: '400px'
+        sidenav: '400px',
+        'sidenav-lg': '300px',
+      },
+      margin: {
+        sidenav: '400px',
+        'sidenav-lg': '300px',
       },
       fontFamily: {
-        'inconsolata': ['var(--font-inconsolata)'],
-        'poppins': ['var(--font-poppins)'],
+        inconsolata: ['var(--font-inconsolata)'],
+        poppins: ['var(--font-poppins)'],
         'dm-mono': ['var(--font-dm-mono)'],
       },
       colors: {
         bg: '#fee9e1',
         'bg-dark': '#b09e99',
+        'bg-light': '#fee9e177',
         'bg-secondary': '#FAD4C0',
         black: '#030712',
         'black-secondary': '#111827',
