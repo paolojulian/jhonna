@@ -13,7 +13,7 @@ const TextInput: FunctionComponent<TextInputProps> = ({
     <input
       {...props}
       className={classNames(
-        'transition focus:outline-none bg-inherit px-3 py-2 border-b placeholder-bg-light',
+        'transition focus:outline-none bg-inherit px-3 py-2 border-b placeholder-bg-light text-bg',
         isError
           ? 'border-red-500'
           : 'border-bg-dark focus:border-accent text-bg'

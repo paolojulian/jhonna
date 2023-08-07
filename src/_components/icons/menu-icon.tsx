@@ -17,9 +17,9 @@ const MenuIcon: FunctionComponent<MenuIconProps> = (props) => {
       <path
         d='M4 6H20M4 12H20M13 18H20'
         stroke='#FEE9E1'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );
