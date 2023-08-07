@@ -37,7 +37,10 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
         viewCv.style.opacity = opacity.toFixed(2);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    if (window.innerWidth > 768) {
+      window.addEventListener('scroll', handleScroll);
+    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -74,7 +77,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
             UI UX Designer
           </p>
         </Stack>
-        <Stack className='fixed lg:static lg:flex right-0 top-0 lg:w-sidenav-lg xl:w-sidenav-lg 2xl:w-sidenav h-screen justify-end items-end p-4 lg:p-nav-lg xl:p-nav-xl 2xl:p-nav'>
+        <Stack className='absolute lg:static lg:flex right-0 top-0 lg:w-sidenav-lg xl:w-sidenav-lg 2xl:w-sidenav h-screen justify-end items-end p-4 lg:p-nav-lg xl:p-nav-xl 2xl:p-nav'>
           <Link
             ref={viewCvRef}
             href='/assets/Jhonna.pdf'

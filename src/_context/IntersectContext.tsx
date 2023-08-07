@@ -40,6 +40,11 @@ export const IntersectProvider: FunctionComponent<{
     });
     if (container) observer.observe(container);
 
+    if (window.innerWidth <= 768) {
+      setIsInView(true);
+      observer.disconnect(); // Remove the observer if the device is mobile
+    }
+
     return () => {
       if (container) observer.unobserve(container);
     };
@@ -47,7 +52,7 @@ export const IntersectProvider: FunctionComponent<{
 
   return (
     <IntersectContext.Provider value={{ isInView }}>
-      <div ref={containerRef}>{children}</div>
+      <div className='w-full md:w-auto' ref={containerRef}>{children}</div>
     </IntersectContext.Provider>
   );
 };

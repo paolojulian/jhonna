@@ -15,7 +15,7 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
   return (
     <section id='portfolio'>
       <div className='bg-white w-full p-4 md:p-12 pb-32'>
-        <Stack className='space-y-12 max-w-screen-lg pb-60'>
+        <Stack className='space-y-12 max-w-screen-lg md:pb-60'>
           <SectionHeading>personal projects</SectionHeading>
 
           <Stack className='space-y-24'>
