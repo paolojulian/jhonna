@@ -21,6 +21,9 @@ module.exports = {
         'nav-lg': '15px',
         'nav-md': '15px',
       },
+      transitionTimingFunction: {
+        fadeIn: 'cubic-bezier(.24,.6,.64,.65)',
+      },
       fontFamily: {
         inconsolata: ['var(--font-inconsolata)'],
         poppins: ['var(--font-poppins)'],
