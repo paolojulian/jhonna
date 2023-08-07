@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 
-export type CloseIconProps = {
+export type MenuIconProps = {
   // no props
 } & React.SVGAttributes<SVGElement>;
 
-const CloseIcon: FunctionComponent<CloseIconProps> = (props) => {
+const MenuIcon: FunctionComponent<MenuIconProps> = (props) => {
   return (
     <svg
       width='24'
@@ -15,14 +15,14 @@ const CloseIcon: FunctionComponent<CloseIconProps> = (props) => {
       {...props}
     >
       <path
-        d='M6 18L18 6M6 6L18 18'
-        stroke='currentColor'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        d='M4 6H20M4 12H20M13 18H20'
+        stroke='#FEE9E1'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
       />
     </svg>
   );
 };
 
-export default CloseIcon;
+export default MenuIcon;

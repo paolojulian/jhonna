@@ -13,7 +13,7 @@ export type ContactSectionProps = {
 
 const ContactSection: FunctionComponent<ContactSectionProps> = () => {
   return (
-    <section id='contact' className='z-50 bg-black relative'>
+    <section id='contact' className='z-40 bg-black relative'>
       <div className='flex flex-col md:flex-row max-w-screen-xl mx-auto w-full py-24'>
         <Stack className='w-sidenav p-12 space-y-12'>
           <h2 className='text-6xl text-bg font-semibold'>get in touch</h2>
@@ -56,7 +56,7 @@ const ContactSection: FunctionComponent<ContactSectionProps> = () => {
               <p className='mb-2 text-bg-secondary'>support</p>
               <Link
                 target='_blank'
-                href='linkedin.com'
+                href='https://www.linkedin.com/in/jhonna-mae-gines-06a8861a6/'
                 className='hover:text-accent'
               >
                 <p>linkedin</p>

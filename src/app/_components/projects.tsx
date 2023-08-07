@@ -1,3 +1,4 @@
+import SectionHeading from '@/_components/common/section-heading';
 import Row from '@/_components/layouts/row';
 import Stack from '@/_components/layouts/stack';
 import Image from 'next/image';
@@ -12,9 +13,7 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
     <section id='portfolio'>
       <div className='bg-white w-full p-4 md:p-12 pb-32'>
         <Stack className='space-y-12 max-w-screen-lg'>
-          <h2 className='font-inconsolata text-3xl md:text-6xl font-semibold'>
-            personal projects
-          </h2>
+          <SectionHeading>personal projects</SectionHeading>
 
           <Stack className='space-y-24'>
             <div className='flex flex-col lg:flex-row w-full items-center space-y-4 lg:space-y-0 lg:space-x-8'>

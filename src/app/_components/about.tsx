@@ -1,3 +1,4 @@
+import SectionHeading from '@/_components/common/section-heading';
 import Stack from '@/_components/layouts/stack';
 import React, { FunctionComponent } from 'react';
 
@@ -10,10 +11,8 @@ const AboutSection: FunctionComponent<AboutSectionProps> = (props) => {
     <section id='about'>
       <div className='bg-white w-full p-4 md:p-12'>
         <Stack className='space-y-8 max-w-screen-lg'>
-          <h2 className='font-inconsolata text-3xl md:text-6xl font-semibold'>
-            about
-          </h2>
-          <p className='text-lg md:text-2xl'>
+          <SectionHeading>about</SectionHeading>
+          <p className='text-lg md:text-2xl pb-40'>
             <span className='text-accent font-bold'>Jhonna</span> is an
             ambitious and dedicated{' '}
             <span className='text-accent font-bold'>UI/UX Designer</span> with a

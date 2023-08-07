@@ -72,7 +72,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
             UI UX Designer
           </p>
         </Stack>
-        <Stack className='hidden lg:flex lg:w-sidenav-lg xl:w-sidenav-lg 2xl:w-sidenav h-screen justify-end items-end lg:p-nav-lg xl:p-nav-xl 2xl:p-nav'>
+        <Stack className='fixed lg:static lg:flex right-0 top-0 lg:w-sidenav-lg xl:w-sidenav-lg 2xl:w-sidenav h-screen justify-end items-end p-4 lg:p-nav-lg xl:p-nav-xl 2xl:p-nav -z-10'>
           <button
             ref={viewCvRef}
             className='rounded-full bg-black w-fit px-8 py-2 text-bg xl:text-xl 2xl:text-2xl'
