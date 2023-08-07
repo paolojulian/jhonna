@@ -1,7 +1,7 @@
 'use client';
 import Row from '@/_components/layouts/row';
 import Link from 'next/link';
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import Stack from './stack';
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
@@ -67,6 +67,14 @@ const Menu: FunctionComponent<MenuProps> = ({ variant = 'web' }) => {
     setIsOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-overflow')
+    } else {
+      document.body.classList.remove('no-overflow')
+    }
+  }, [isOpen])
+
   const { activeSection } = useScroll();
 
   return (
@@ -77,7 +85,7 @@ const Menu: FunctionComponent<MenuProps> = ({ variant = 'web' }) => {
           'hidden md:flex'
         )}
       >
-        <div className='h-[50px] w-[50px] bg-black flex flex-row justify-center items-center rounded-full'>
+        <div className='h-[50px] w-[50px] bg-black flex flex-row justify-center items-center rounded-full select-none'>
           <p className='font-dm-mono text-bg text-2xl'>j</p>
         </div>
 
