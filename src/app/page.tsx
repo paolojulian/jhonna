@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+
       <section id='about z-10'>
         <div className='bg-white w-full p-12'>
           <Stack className='space-y-8 max-w-screen-lg'>
@@ -22,6 +23,7 @@ export default function Home() {
           </Stack>
         </div>
       </section>
+
       <section id='projects'>
         <div className='bg-white w-full p-12'>
           <Stack className='space-y-8 max-w-screen-lg'>

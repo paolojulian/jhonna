@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      width: {
+        sidenav: '400px'
+      },
       fontFamily: {
         'inconsolata': ['var(--font-inconsolata)'],
         'poppins': ['var(--font-poppins)'],
@@ -14,6 +17,7 @@ module.exports = {
         'bg-secondary': '#FAD4C0',
         black: '#030712',
         'black-secondary': '#111827',
+        'black-light': '#11182790',
         accent: '#64b6ac',
       },
       backgroundImage: {

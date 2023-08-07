@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  perspective: 1px;
-  transform-style: preserve-3d;
-}
-
 @media screen and (min-width: 1024px) {
   /* scrollbar */
   /* width */

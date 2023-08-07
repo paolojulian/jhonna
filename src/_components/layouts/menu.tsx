@@ -2,10 +2,8 @@
 import Row from '@/_components/layouts/row';
 import Link from 'next/link';
 import React, { FunctionComponent, useState } from 'react';
-import HamburgerMenuIcon from '../icons/hamburger-menu';
 import Stack from './stack';
 import classNames from 'classnames';
-import CloseIcon from '../icons/close-icon';
 import { usePathname } from 'next/navigation';
 
 type Variants = 'default' | 'light';
@@ -15,23 +13,14 @@ export type MenuProps = {
   fixed?: boolean;
 };
 
-const colorVariants: Record<Variants, string> = {
-  default: 'bg-slate-900 text-slate-400',
-  light: 'bg-main text-slate-600',
-};
-
-const borderVariants: Record<Variants, string> = {
-  default: '',
-  light: 'border-l border-slate-400',
-};
-
 const WebLink: FunctionComponent<
   React.ComponentProps<typeof Link> & { isActive: boolean; name: string }
 > = ({ isActive, name, ...props }) => {
   return (
     <li
       className={classNames(
-        'w-[250px] flex flex-row justify-start items-center py-1 pr-5 font-medium text-lg',
+        'w-[250px] flex flex-col justify-center items-start py-1 font-medium text-lg',
+        'group',
         'font-poppins',
         'border-b',
         isActive ? 'border-accent text-accent' : 'border-transparent'
@@ -40,6 +29,13 @@ const WebLink: FunctionComponent<
       <Link {...props} className='w-full'>
         {name}
       </Link>
+      <div
+        className={classNames(
+          !isActive
+            ? 'w-0 group-hover:w-full transition-all h-[1.5px] bg-bg-secondary'
+            : ''
+        )}
+      ></div>
     </li>
   );
 };

@@ -36,12 +36,12 @@ export default function RootLayout({
           `${poppins.variable} font-poppins`,
           `${dmMono.variable} font-dm-mono`,
           `${inconsolata.variable} font-inconsolata`,
-          'bg-bg min-h-screen text-black-secondary'
+          'bg-bg text-black-secondary h-full'
         )}
       >
-        <div className='mx-auto flex flex-row min-h-screen relative font-inconsolata'>
+        <div className='mx-auto flex flex-row relative font-inconsolata h-full'>
           {/* sidenav */}
-          <header className='flex flex-col h-screen sticky top-0'>
+          <header className='flex flex-col h-screen sticky top-0 w-sidenav'>
             <Menu />
           </header>
           {/*  */}

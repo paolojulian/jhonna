@@ -10,12 +10,14 @@ export type HeroSectionProps = {
 const HeroSection: FunctionComponent<HeroSectionProps> = () => {
   const logoRef = useRef<HTMLHeadingElement>(null);
   const professionRef = useRef<HTMLParagraphElement>(null);
+  const viewCvRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       let scroll = window.scrollY;
       const logo = logoRef.current;
       const profession = professionRef.current;
+      const viewCv = viewCvRef.current;
 
       if (logo) {
         logo.style.transform = `translateY(${scroll * 0.8}px)`;
@@ -25,6 +27,12 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
         const opacity = 1 - Math.min(scroll / 200, 1);
         profession.style.transform = `translateY(${scroll * 0.7}px)`;
         profession.style.opacity = opacity.toFixed(2);
+      }
+
+      if (viewCv) {
+        const opacity = 1 - Math.min(scroll / 100, 1);
+        viewCv.style.transform = `translateY(${scroll * 0.7}px)`;
+        viewCv.style.opacity = opacity.toFixed(2);
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -40,9 +48,9 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
       </div>
       <section
         id='hero'
-        className='flex flex-col min-h-screen justify-center items-start pl-12 relative'
+        className='flex flex-row min-h-screen justify-center items-center'
       >
-        <Stack className='items-center'>
+        <Stack className='items-center flex-1'>
           <h1
             ref={logoRef}
             className='font-dm-mono font-medium text-[200px] leading-[200px] -z-10'
@@ -52,6 +60,14 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
           <p ref={professionRef} className='font-poppins text-2xl -z-10'>
             UI UX Designer
           </p>
+        </Stack>
+        <Stack className='w-sidenav h-screen justify-end items-end p-[50px]'>
+          <button
+            ref={viewCvRef}
+            className='rounded-full bg-black w-fit px-8 py-2 text-bg text-2xl'
+          >
+            view cv
+          </button>
         </Stack>
       </section>
     </>
