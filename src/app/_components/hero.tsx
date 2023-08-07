@@ -2,6 +2,7 @@
 import DotGrid from '@/_components/common/dot-grid';
 import Stack from '@/_components/layouts/stack';
 import classNames from 'classnames';
+import Link from 'next/link';
 import React, { FunctionComponent, useEffect, useRef } from 'react';
 
 export type HeroSectionProps = {
@@ -11,7 +12,7 @@ export type HeroSectionProps = {
 const HeroSection: FunctionComponent<HeroSectionProps> = () => {
   const logoRef = useRef<HTMLHeadingElement>(null);
   const professionRef = useRef<HTMLParagraphElement>(null);
-  const viewCvRef = useRef<HTMLButtonElement>(null);
+  const viewCvRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +49,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
       <div className='fixed w-3/5 h-screen right-0 top-24 -z-20 overflow-hidden pointer-events-none'>
         <DotGrid gridGap={30} dotColor={'#11182720'} />
       </div>
+
       <section
         id='hero'
         className='flex flex-row min-h-screen justify-center items-center w-full'
@@ -72,13 +74,16 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
             UI UX Designer
           </p>
         </Stack>
-        <Stack className='fixed lg:static lg:flex right-0 top-0 lg:w-sidenav-lg xl:w-sidenav-lg 2xl:w-sidenav h-screen justify-end items-end p-4 lg:p-nav-lg xl:p-nav-xl 2xl:p-nav -z-10'>
-          <button
+        <Stack className='fixed lg:static lg:flex right-0 top-0 lg:w-sidenav-lg xl:w-sidenav-lg 2xl:w-sidenav h-screen justify-end items-end p-4 lg:p-nav-lg xl:p-nav-xl 2xl:p-nav'>
+          <Link
             ref={viewCvRef}
+            href='/assets/Jhonna.pdf'
+            role='button'
+            target='_blank'
             className='rounded-full bg-black w-fit px-8 py-2 text-bg xl:text-xl 2xl:text-2xl'
           >
             view cv
-          </button>
+          </Link>
         </Stack>
       </section>
     </>
