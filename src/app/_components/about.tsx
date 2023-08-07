@@ -8,10 +8,12 @@ export type AboutSectionProps = {
 const AboutSection: FunctionComponent<AboutSectionProps> = (props) => {
   return (
     <section id='about'>
-      <div className='bg-white w-full p-12'>
+      <div className='bg-white w-full p-4 md:p-12'>
         <Stack className='space-y-8 max-w-screen-lg'>
-          <h2 className='font-inconsolata text-6xl font-medium'>about</h2>
-          <p className='text-2xl'>
+          <h2 className='font-inconsolata text-3xl md:text-6xl font-semibold'>
+            about
+          </h2>
+          <p className='text-lg md:text-2xl'>
             <span className='text-accent font-bold'>Jhonna</span> is an
             ambitious and dedicated{' '}
             <span className='text-accent font-bold'>UI/UX Designer</span> with a

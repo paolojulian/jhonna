@@ -37,14 +37,14 @@ export default function RootLayout({
           `${poppins.variable} font-poppins`,
           `${dmMono.variable} font-dm-mono`,
           `${inconsolata.variable} font-inconsolata`,
-          'bg-bg text-black-secondary h-full'
+          'bg-bg text-black-secondary h-full max-w-screen overflow-x-hidden'
         )}
       >
         {/* sidenav */}
-        <header className='flex flex-col h-screen top-0 left-0 w-sidenav fixed -z-10'>
+        <header className='hidden md:flex flex-col h-screen top-0 left-0 md:w-sidenav-md lg:w-sidenav-lg xl:w-sidenav-xl 2xl:w-sidenav fixed z-0'>
           <Menu />
         </header>
-        <div className='mx-auto flex flex-row relative font-inconsolata h-full ml-sidenav'>
+        <div className='mx-auto flex flex-row relative font-inconsolata h-full md:ml-sidenav-md lg:ml-sidenav-lg xl:ml-sidenav-xl 2xl:ml-sidenav'>
           {/*  */}
           <main className='flex-1'>{children}</main>
         </div>

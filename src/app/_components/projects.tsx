@@ -10,18 +10,15 @@ export type ProjectsSectionProps = {
 const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
   return (
     <section id='portfolio'>
-      <div className='bg-white w-full p-12 pb-32'>
+      <div className='bg-white w-full p-4 md:p-12 pb-32'>
         <Stack className='space-y-12 max-w-screen-lg'>
-          <h2 className='font-inconsolata text-6xl font-medium'>
+          <h2 className='font-inconsolata text-3xl md:text-6xl font-semibold'>
             personal projects
           </h2>
 
           <Stack className='space-y-24'>
-            <Row className='w-full items-center space-x-8'>
-              <div
-                className='w-[400px] h-[400px] relative shadow-sm border border-bg'
-                style={{ width: '400px' }}
-              >
+            <div className='flex flex-col lg:flex-row w-full items-center space-y-4 lg:space-y-0 lg:space-x-8'>
+              <div className='w-full lg:w-[400px] h-[300px] md:h-[400px] relative shadow-sm border border-bg'>
                 <Image
                   layout='fill'
                   src={'/assets/hotel-booking.png'}
@@ -29,11 +26,12 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
                   objectFit='cover'
                 />
               </div>
+
               <Stack className='h-full justify-center flex-1 space-y-2'>
-                <h3 className='text-3xl font-medium'>
+                <h3 className='text-xl md:text-3xl font-medium'>
                   Hotel Booking and Reservation
                 </h3>
-                <p className='text-lg line-clamp-7 text-black-light'>
+                <p className='text-base md:text-lg line-clamp-7 text-black-light'>
                   Hotel Booking and Reservation - A hotel reservation and
                   booking application is a mobile app that allows users to
                   search for and book hotel rooms, as well as manage their
@@ -41,14 +39,14 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
                 </p>
                 <p className='pt-4 font-bold text-accent'>SEE MORE &gt;</p>
               </Stack>
-            </Row>
+            </div>
 
-            <Row className='w-full items-center space-x-8'>
-              <Stack className='h-full justify-center flex-1 space-y-2 text-right'>
-                <h3 className='text-3xl font-medium'>
+            <div className='flex flex-col-reverse lg:flex-row w-full items-center lg:space-x-8'>
+              <Stack className='h-full justify-center flex-1 space-y-2 lg:text-right mt-4 lg:mt-0'>
+                <h3 className='text-xl md:text-3xl font-medium'>
                   Landing Page and Blogsite
                 </h3>
-                <p className='text-lg line-clamp-7 text-black-light'>
+                <p className='text-base md:text-lg line-clamp-7 text-black-light'>
                   The Automotive Repair Shop&rsquo;s Landing Page and Dynamic
                   Blogsite offer a comprehensive online platform designed to
                   engage customers, showcase services, and provide valuable
@@ -59,10 +57,7 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
                 </p>
                 <p className='pt-4 font-bold text-accent'>SEE MORE &gt;</p>
               </Stack>
-              <div
-                className='w-[400px] h-[400px] relative shadow-sm border border-bg'
-                style={{ width: '400px' }}
-              >
+              <div className='w-full lg:w-[400px] h-[300px] md:h-[400px] relative shadow-sm border border-bg'>
                 <Image
                   layout='fill'
                   src={'/assets/landing.png'}
@@ -70,7 +65,7 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
                   objectFit='cover'
                 />
               </div>
-            </Row>
+            </div>
           </Stack>
         </Stack>
       </div>

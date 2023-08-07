@@ -1,6 +1,7 @@
 'use client';
 import DotGrid from '@/_components/common/dot-grid';
 import Stack from '@/_components/layouts/stack';
+import classNames from 'classnames';
 import React, { FunctionComponent, useEffect, useRef } from 'react';
 
 export type HeroSectionProps = {
@@ -49,23 +50,32 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
       </div>
       <section
         id='hero'
-        className='flex flex-row min-h-screen justify-center items-center'
+        className='flex flex-row min-h-screen justify-center items-center w-full'
       >
         <Stack className='items-center flex-1'>
           <h1
             ref={logoRef}
-            className='font-dm-mono font-medium text-[200px] leading-[200px] tracking-[-20px] -z-10'
+            className={classNames(
+              'font-dm-mono font-medium -z-10',
+              'xl:text-[200px] xl:leading-[200px] xl:tracking-[-20px]',
+              'lg:text-[150px] lg:leading-[150px] lg:tracking-[-20px]',
+              'md:text-[150px] md:leading-[150px] md:tracking-[-20px]',
+              'text-[110px] leading-[110px] tracking-[-10px]'
+              // '2xl:text-[200px] 2xl:leading-[200px] 2xl:tracking-[-20px]',
+              // 'xl:text-[150px] xl:leading-[150px] xl:tracking-[-20px]',
+            )}
           >
-            jhonn<span className='tracking-[-40px]'>a</span>.
+            jhonn<span className='tracking-[-30px] md:tracking-[-40px]'>a</span>
+            .
           </h1>
           <p ref={professionRef} className='font-poppins text-2xl -z-10'>
             UI UX Designer
           </p>
         </Stack>
-        <Stack className='w-sidenav h-screen justify-end items-end p-[50px]'>
+        <Stack className='hidden lg:flex lg:w-sidenav-lg xl:w-sidenav-lg 2xl:w-sidenav h-screen justify-end items-end lg:p-nav-lg xl:p-nav-xl 2xl:p-nav'>
           <button
             ref={viewCvRef}
-            className='rounded-full bg-black w-fit px-8 py-2 text-bg text-2xl'
+            className='rounded-full bg-black w-fit px-8 py-2 text-bg xl:text-xl 2xl:text-2xl'
           >
             view cv
           </button>

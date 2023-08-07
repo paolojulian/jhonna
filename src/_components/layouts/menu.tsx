@@ -19,13 +19,13 @@ const WebLink: FunctionComponent<
   return (
     <li
       className={classNames(
-        'w-[250px] flex flex-col justify-center items-start py-1 font-medium text-lg',
+        'w-full flex flex-col justify-center items-start py-1 font-medium text-lg',
         'group',
         'border-b',
         isActive ? 'border-accent text-accent' : 'border-transparent'
       )}
     >
-      <Link {...props} className='w-full'>
+      <Link {...props} className='w-full flex-1'>
         {name}
       </Link>
       <div
@@ -70,7 +70,7 @@ const Menu: FunctionComponent<MenuProps> = ({
   const pathname = usePathname();
 
   return (
-    <Stack className='flex-1 p-[50px]'>
+    <Stack className='flex-1 md:p-nav-md lg:p-nav-lg xl:p-nav-xl 2xl:p-nav'>
       <div className='h-[50px] w-[50px] bg-black flex flex-row justify-center items-center rounded-full'>
         <p className='font-dm-mono'>j</p>
       </div>
@@ -85,9 +85,9 @@ const Menu: FunctionComponent<MenuProps> = ({
       </nav>
 
       <Row className='space-x-4'>
-        <div className='w-[50px] h-[50px] bg-black-secondary rounded-full'></div>
-        <div className='w-[50px] h-[50px] bg-black-secondary rounded-full'></div>
-        <div className='w-[50px] h-[50px] bg-black-secondary rounded-full'></div>
+        <div className='w-[40px] h-[40px] bg-black-secondary rounded-full'></div>
+        <div className='w-[40px] h-[40px] bg-black-secondary rounded-full'></div>
+        <div className='w-[40px] h-[40px] bg-black-secondary rounded-full'></div>
       </Row>
     </Stack>
   );

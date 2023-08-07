@@ -13,8 +13,8 @@ export type ContactSectionProps = {
 
 const ContactSection: FunctionComponent<ContactSectionProps> = () => {
   return (
-    <section id='contact' className='z-50 bg-black'>
-      <Row className='max-w-screen-xl mx-auto w-full py-24'>
+    <section id='contact' className='z-50 bg-black relative'>
+      <div className='flex flex-col md:flex-row max-w-screen-xl mx-auto w-full py-24'>
         <Stack className='w-sidenav p-12 space-y-12'>
           <h2 className='text-6xl text-bg font-semibold'>get in touch</h2>
           <form className='w-full flex flex-col space-y-4'>
@@ -35,11 +35,11 @@ const ContactSection: FunctionComponent<ContactSectionProps> = () => {
             </div>
           </form>
         </Stack>
-        <div className='flex-1 p-8'>
-          <p className='font-dm-mono font-medium text-[200px] tracking-[-20px] -z-10'>
+        <div className='flex-1 p-12'>
+          <p className='hidden lg:block font-dm-mono font-medium text-[200px] tracking-[-20px] -z-10'>
             jhonn<span className='tracking-[-40px]'>a</span>.
           </p>
-          <Row className='text-bg-light space-x-12'>
+          <div className='flex flex-col lg:flex-row text-center md:text-left text-bg-light space-y-8 lg:space-y-0 lg:space-x-12'>
             <Stack>
               <p className='mb-2 text-bg-secondary'>availability</p>
               <p>Monday - Friday</p>
@@ -69,9 +69,9 @@ const ContactSection: FunctionComponent<ContactSectionProps> = () => {
                 <p>jhonnagines@gmail.com</p>
               </Link>
             </Stack>
-          </Row>
+          </div>
         </div>
-      </Row>
+      </div>
     </section>
   );
 };

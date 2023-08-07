@@ -5,11 +5,21 @@ module.exports = {
     extend: {
       width: {
         sidenav: '400px',
-        'sidenav-lg': '300px',
+        'sidenav-xl': '300px',
+        'sidenav-lg': '200px',
+        'sidenav-md': '200px',
       },
       margin: {
         sidenav: '400px',
-        'sidenav-lg': '300px',
+        'sidenav-xl': '300px',
+        'sidenav-lg': '200px',
+        'sidenav-md': '200px',
+      },
+      padding: {
+        nav: '50px',
+        'nav-xl': '30px',
+        'nav-lg': '15px',
+        'nav-md': '15px',
       },
       fontFamily: {
         inconsolata: ['var(--font-inconsolata)'],
