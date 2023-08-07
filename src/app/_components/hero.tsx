@@ -52,7 +52,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
         id='hero'
         className='flex flex-row min-h-screen justify-center items-center w-full'
       >
-        <Stack className='items-center flex-1'>
+        <Stack className='items-center flex-1 select-none'>
           <h1
             ref={logoRef}
             className={classNames(

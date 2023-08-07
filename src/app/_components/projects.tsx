@@ -4,6 +4,7 @@ import Stack from '@/_components/layouts/stack';
 import { useScroll } from '@/_context/ScrollContext';
 import Image from 'next/image';
 import React, { FunctionComponent, useEffect, useRef } from 'react';
+import ProjectItem from './projects/project-item';
 
 export type ProjectsSectionProps = {
   // no props
@@ -17,59 +18,32 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = (props) => {
           <SectionHeading>personal projects</SectionHeading>
 
           <Stack className='space-y-24'>
-            <div className='flex flex-col lg:flex-row w-full items-center space-y-4 lg:space-y-0 lg:space-x-8'>
-              <div className='w-full lg:w-[400px] h-[300px] md:h-[400px] relative shadow-sm border border-bg'>
-                <Image
-                  layout='fill'
-                  src={'/assets/hotel-booking.png'}
-                  alt={'Hotel Booking and Reservation'}
-                  style={{
-                    objectFit: 'cover',
-                  }}
-                />
-              </div>
-
-              <Stack className='h-full justify-center flex-1 space-y-2'>
-                <h3 className='text-xl md:text-3xl font-medium'>
-                  Hotel Booking and Reservation
-                </h3>
-                <p className='text-base md:text-lg line-clamp-7 text-black-light'>
-                  Hotel Booking and Reservation - A hotel reservation and
+            <ProjectItem
+              imageUrl='/assets/hotel-booking.png'
+              title='Hotel Booking and Reservation'
+              description='Hotel Booking and Reservation - A hotel reservation and
                   booking application is a mobile app that allows users to
                   search for and book hotel rooms, as well as manage their
-                  reservations and view hotel information.
-                </p>
-                <p className='pt-4 font-bold text-accent'>SEE MORE &gt;</p>
-              </Stack>
-            </div>
+                  reservations and view hotel information.'
+              link={
+                'https://www.figma.com/file/Os5RYokIkkoUAsxOYhimuk/Hotel-Booking-and-Reservation?type=design&node-id=1034%3A5332&mode=design&t=DHkXAfTJP2xrlini-1'
+              }
+            />
 
-            <div className='flex flex-col-reverse lg:flex-row w-full items-center lg:space-x-8'>
-              <Stack className='h-full justify-center flex-1 space-y-2 lg:text-right mt-4 lg:mt-0'>
-                <h3 className='text-xl md:text-3xl font-medium'>
-                  Landing Page and Blogsite
-                </h3>
-                <p className='text-base md:text-lg line-clamp-7 text-black-light'>
-                  The Automotive Repair Shop&rsquo;s Landing Page and Dynamic
+            <ProjectItem
+              variant='right'
+              imageUrl='/assets/landing.png'
+              title='Landing Page and Blogsite'
+              description={`
+                  The Automotive Repair Shop's Landing Page and Dynamic
                   Blogsite offer a comprehensive online platform designed to
                   engage customers, showcase services, and provide valuable
                   automotive insights. Powered by a Headless CMS, this
                   integrated solution ensures seamless content management,
                   captivating design, and user-friendly navigation, creating a
                   compelling web presence for the repair shop.
-                </p>
-                <p className='pt-4 font-bold text-accent'>SEE MORE &gt;</p>
-              </Stack>
-              <div className='w-full lg:w-[400px] h-[300px] md:h-[400px] relative shadow-sm border border-bg'>
-                <Image
-                  layout='fill'
-                  src={'/assets/landing.png'}
-                  alt={'Landing Page and Blogsite'}
-                  style={{
-                    objectFit: 'cover',
-                  }}
-                />
-              </div>
-            </div>
+              `}
+            />
           </Stack>
         </Stack>
       </div>
