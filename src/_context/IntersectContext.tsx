@@ -52,7 +52,9 @@ export const IntersectProvider: FunctionComponent<{
 
   return (
     <IntersectContext.Provider value={{ isInView }}>
-      <div className='w-full md:w-auto' ref={containerRef}>{children}</div>
+      <div className='w-full md:w-auto' ref={containerRef}>
+        {children}
+      </div>
     </IntersectContext.Provider>
   );
 };
