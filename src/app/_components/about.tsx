@@ -32,7 +32,7 @@ const AboutSection: FunctionComponent<AboutSectionProps> = (props) => {
                   <span className='text-accent font-bold'>UI/UX Designer</span>{' '}
                   with a strong passion for crafting intuitive and visually
                   appealing digital experiences. While she may not have
-                  professional work experience, She have invested her time and
+                  professional work experience, she has invested her time and
                   effort in completing comprehensive graphic design courses,
                   equipping her with the necessary skills and knowledge to excel
                   in this field.
