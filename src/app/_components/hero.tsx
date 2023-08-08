@@ -45,7 +45,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  });
+  }, []);
 
   return (
     <>
