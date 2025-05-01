@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+:root {
+  --black: #030712;
+  --white: #f9fafb;
+}
+
+@theme {
+  --font-display: 'AvantGarde', "sans-serif";
+}
+
+@theme inline {
+  --color-background: var(--white);
+  --color-foreground: var(--black);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'AvantGarde', sans-serif;
+}
