@@ -5,7 +5,7 @@ type AppBentoBoxProps = HtmlHTMLAttributes<HTMLDivElement>;
 
 const AppBentoBox: FC<AppBentoBoxProps> = ({ className, ...props }) => {
   return (
-    <div className={cn('rounded-2xl bg-gray-50', className)} {...props} />
+    <div className={cn('rounded-2xl bg-gray-50 overflow-hidden', className)} {...props} />
   );
 };
 
