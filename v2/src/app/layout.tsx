@@ -14,11 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`antialiased font-display`}>
+      <body className={`antialiased font-display text-black bg-background`}>
         <section id='navbar' className='z-10 sticky top-0 inset-x-0'>
           <NavbarSection />
         </section>
-        <main>{children}</main>
+        <main className='py-4'>{children}</main>
       </body>
     </html>
   );

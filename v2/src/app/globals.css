@@ -4,15 +4,25 @@
 :root {
   --black: #030712;
   --white: #f9fafb;
+  --primary: #ff6c6c;
 }
 
 @theme {
-  --font-display: 'AvantGarde', "sans-serif";
+  --font-display: 'AvantGarde', 'sans-serif';
 }
 
 @theme inline {
   --color-background: var(--white);
   --color-foreground: var(--black);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-primary: var(--primary);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 72rem;
 }
 
 body {
