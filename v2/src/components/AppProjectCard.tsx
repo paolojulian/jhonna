@@ -29,7 +29,7 @@ const AppProjectCard: FC<AppProjectCardProps> = ({
         <div>
           <AppTypography variant={'heading-sm'}>{title}</AppTypography>
           <AppTypography
-            className='leading-2.5 opacity-40'
+            className='leading-2.5 opacity-40 text-xs'
             variant={'heading-sm'}
           >
             {subtitle}

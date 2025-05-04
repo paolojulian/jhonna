@@ -14,7 +14,8 @@
 }
 
 @theme {
-  --font-display: 'AvantGarde', 'sans-serif';
+  --font-headings: 'AvantGarde', 'sans-serif';
+  --font-helvetica: 'HelveticaNeue', 'sans-serif';
 }
 
 @theme inline {

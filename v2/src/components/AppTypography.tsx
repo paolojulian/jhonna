@@ -5,6 +5,7 @@ type FontVariants =
   | 'serif'
   | 'body'
   | 'body-wide'
+  | 'heading-xs'
   | 'heading-sm'
   | 'heading'
   | 'heading-lg'
@@ -14,14 +15,16 @@ type FontVariants =
 const fontVariantsMap = {
   serif: 'font-serif',
   body: 'text-base',
-  'body-wide': 'text-sm tracking-[0.40em] font-medium',
-  'heading-sm': 'tracking-[-0.02em] font-medium',
-  heading: 'text-[1.5rem] md:text-4xl tracking-[-0.04em] font-medium',
+  'body-wide': 'text-sm tracking-[0.40em] font-medium font-heading',
+  'heading-sm': 'font-medium font-heading',
+  'heading-xs': 'text-sm tracking-[-0.02em] font-medium font-heading',
+  heading:
+    'text-[1.5rem] md:text-4xl tracking-[-0.02em] font-medium font-heading',
   'heading-lg':
-    'text-[2.5rem] md:text-[4rem] tracking-[-0.04em] font-medium leading-[2.75rem] md:leading-[4.5rem]',
+    'text-[2.5rem] md:text-[4rem] tracking-[-0.02em] font-medium leading-[2.75rem] md:leading-[3.5rem] font-heading',
   'heading-xl':
-    'text-[4rem] md:text-[7rem] tracking-[-0.04em] leading-[3.5rem] md:leading-[5.5rem] font-medium',
-  small: 'text-sm font-medium',
+    'text-[4rem] md:text-[7rem] tracking-[-0.02em] leading-[3.5rem] md:leading-[5.5rem] font-medium font-heading',
+  small: 'text-sm font-medium font-heading',
 } satisfies Record<FontVariants, string>;
 
 export const AppTypographyVariants = cva('font-display', {
