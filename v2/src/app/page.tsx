@@ -48,9 +48,9 @@ export default function Home() {
               ABOUT ME...
             </AppTypography>
             <AppTypography className='text-neutral-600'>
-              I am an ambitious and dedicated UI/UX Designer with a strong
-              passion for crafting intuitive and visually appealing digital
-              experiences.
+              {`I'm a UI/UX Designer with 1+ year of experience creating clean,
+              user-friendly designs that are easy to implement by developers and improve real
+              user flows.`}
             </AppTypography>
           </AppBentoBox>
           <CVCard />

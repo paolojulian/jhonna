@@ -74,7 +74,7 @@ const ContactCard: FC<ContactCardProps> = () => {
   return (
     <AppBentoBox className='row-span-2 bg-lavender-mist p-6'>
       <form onSubmit={handleSubmit} className='flex flex-col gap-6 h-full'>
-        <div className='flex flex-row justify-end gap-4'>
+        <div className='flex flex-row justify-end gap-2'>
           <a className='size-[28px] rounded-full bg-peacoat flex items-center justify-center'>
             <LinkedInIcon />
           </a>

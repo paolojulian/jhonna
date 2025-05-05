@@ -58,7 +58,7 @@ const AppTextInput: FC<AppTextInputProps> = ({
         className={cn(
           'peer',
           'placeholder-transparent rounded-2xl',
-          'pt-7 px-4 pb-2 border border-peacoat',
+          'pt-7 px-4 pb-2 border border-peacoat/50',
           ' focus:placeholder-neutral-500',
           'group-focus-within:outline-none',
           'group-focus-within:border-black',

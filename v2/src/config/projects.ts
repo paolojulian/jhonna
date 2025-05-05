@@ -5,6 +5,7 @@ export type Project = {
   description: string;
   address?: string;
   projectLink?: string;
+  projectLinkText?: string;
   images: {
     id: string;
     src: string;
@@ -87,7 +88,7 @@ export const projects: Project[] = [
     subtitle: 'Inspection Guidelines',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    address: 'Sweden, Europe',
+    address: 'Sweden, Europe — App is for private use',
     images: [
       {
         id: 'ovk-1',
@@ -109,8 +110,9 @@ export const projects: Project[] = [
     subtitle: 'Booking & Reservation',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    address: 'Figma — Personal Project',
-    projectLink: 'todo',
+    projectLink:
+      'https://www.figma.com/design/Os5RYokIkkoUAsxOYhimuk/Hotel-Booking-and-Reservation?m=auto&t=8nJ9ZtTNaHH3nQcJ-6',
+    projectLinkText: 'Figma — Personal Project',
     images: [
       {
         id: 'hotel-booking-1',
@@ -132,8 +134,10 @@ export const projects: Project[] = [
     subtitle: 'Ecommerce',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    address: 'Figma — Personal Project',
-    projectLink: 'todo',
+    projectLink:
+      'https://www.figma.com/design/WBpmJaE3LO9YATWcAVi7JM/Beauty-Products?node-id=1282-12225&p=f&t=ZiHYw1yIYK5L9065-0',
+    projectLinkText: 'Figma — Personal Project',
+
     images: [
       {
         id: 'beauty-1',
