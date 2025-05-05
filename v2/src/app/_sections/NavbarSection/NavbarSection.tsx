@@ -1,20 +1,41 @@
+'use client';
 import AppTypography from '@/components/AppTypography';
+import { Routes } from '@/config/routes.contants';
 import cn from '@/utils/cn';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
 type NavbarSectionProps = object;
 
 const NavbarSection: FC<NavbarSectionProps> = () => {
+  const pathname = usePathname();
+
   return (
     <>
       {/* desktop */}
       <nav className='py-10 mx-auto w-fit z-20'>
         <div className='rounded-full bg-neutral-100 p-2 flex flex-row'>
-          <NavbarLink title='Home' href='/' isActive />
-          <NavbarLink title='Projects' href='#projects' isActive={false} />
-          <NavbarLink title='About' href='#about' isActive={false} />
-          <NavbarLink title='Contact' href='#contact' isActive={false} />
+          <NavbarLink
+            title='Home'
+            href={Routes.home()}
+            isActive={pathname === Routes.home()}
+          />
+          <NavbarLink
+            title='Projects'
+            href={Routes.projects()}
+            isActive={pathname === Routes.projects()}
+          />
+          <NavbarLink
+            title='About'
+            href={Routes.about()}
+            isActive={pathname === Routes.about()}
+          />
+          <NavbarLink
+            title='Contact'
+            href={Routes.contact()}
+            isActive={pathname === Routes.contact()}
+          />
         </div>
       </nav>
       {/* <NavbarSectionMobile /> */}
