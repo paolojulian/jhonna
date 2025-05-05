@@ -4,7 +4,7 @@
 :root {
   --black: #2a354b;
   --white: #f3f4f7;
-  --primary: #ff6c6c;
+  --red: #ff6c6c;
   --peacoat: #2a354b;
   --honeydew: #e9f5db;
   --lavender-mist: #dfe7fd;
@@ -23,7 +23,7 @@
   --color-foreground: var(--black);
   --color-black: var(--black);
   --color-white: var(--white);
-  --color-primary: var(--primary);
+  --color-red: var(--red);
   --color-peacoat: var(--peacoat);
   --color-honeydew: var(--honeydew);
   --color-lavender-mist: var(--lavender-mist);
