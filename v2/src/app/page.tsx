@@ -102,7 +102,7 @@ export default function Home() {
           imageLink="/images/projects/hotel-booking.png"
           subtitle="BOOKING & RESERVATION"
           title="HOTEL BOOKING APP"
-          link="/projects/hotem-booking"
+          link="/projects/hotel-booking"
         />
       </div>
     </>

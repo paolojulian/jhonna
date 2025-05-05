@@ -46,7 +46,7 @@ export default function Home({ params }: Props) {
       <AppTypography>{project.description}</AppTypography>
 
       <AppTypography variant="heading-sm">
-        {!!project.address && <span>{project.address}</span>}
+        {!!project.address && <span>{project.address} </span>}
         {!!project.projectLink && (
           <>
             @
