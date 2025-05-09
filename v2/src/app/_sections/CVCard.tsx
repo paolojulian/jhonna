@@ -17,7 +17,8 @@ const CVCard: FC<CVCardProps> = () => {
       <AppBentoBox
         // className='flex-1 px-6 pt-6 space-y-4 bg-peach'
         className={cn(
-          'w-full h-full flex-1 flex flex-col gap-4 px-6 pt-4 relative overflow-hidden group',
+          'w-full h-full flex-1 flex flex-col gap-4 relative overflow-hidden group',
+          'px-3 lg:px-6 pt-3 lg:pt-4',
           'hover:outline-1 hover:outline-black transition-colors',
           'bg-peach'
         )}
@@ -34,9 +35,8 @@ const CVCard: FC<CVCardProps> = () => {
           <Image
             alt='Jhonna'
             src='/images/cv.png'
+            className='object-left lg:object-center object-cover'
             fill
-            objectFit='cover'
-            objectPosition='center'
           />
         </div>
       </AppBentoBox>

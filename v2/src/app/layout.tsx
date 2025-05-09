@@ -19,7 +19,7 @@ export default function RootLayout({
         <NavbarSection />
         <main>{children}</main>
         <footer className='text-center py-10'>
-          <AppTypography className='text-neutral-500'>
+          <AppTypography className='text-neutral-500 mx-auto max-w-[300px] lg:max-w-none'>
             Portfolio of Jhonna Mae Gines &mdash; &copy; 2025. All rights
             reserved.
           </AppTypography>

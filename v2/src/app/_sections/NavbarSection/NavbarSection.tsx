@@ -14,7 +14,10 @@ const NavbarSection: FC<NavbarSectionProps> = () => {
   return (
     <>
       {/* desktop */}
-      <nav className='py-10 mx-auto w-fit z-20'>
+      <nav className={cn(
+        'py-6 lg:py-10',
+        'mx-auto w-fit z-20'
+      )}>
         <div className='rounded-full bg-neutral-100 p-2 flex flex-row'>
           <NavbarLink
             title='Home'

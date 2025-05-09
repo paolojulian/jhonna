@@ -1,8 +1,15 @@
 import AppProjectCard from '@/components/AppProjectCard';
+import cn from '@/utils/cn';
 
 export default function ProjectsPage() {
   return (
-    <div className='grid grid-cols-3 auto-rows-[1fr] gap-4 container'>
+    <div
+      className={cn(
+        'grid auto-rows-[1fr] container',
+        'gap-4 lg:gap-4',
+        'grid-cols-1 lg:grid-cols-3'
+      )}
+    >
       <AppProjectCard
         imageLink='/images/projects/sce.png'
         subtitle='BEAUTY PRODUCTS AND SERVICES'
