@@ -41,7 +41,7 @@ const AppProjectCard: FC<AppProjectCardProps> = ({
             </AppTypography>
           </div>
           {link ? (
-            <div className='-mr-4 size-[38px] group-hover:bg-black group-hover:text-white transition-colors flex flex-item justify-center items-center rounded-full'>
+            <div className='-mr-2 size-[38px] group-hover:bg-black group-hover:text-white transition-colors flex flex-item justify-center items-center rounded-full'>
               <ArrowUpperRightIcon />
             </div>
           ) : (

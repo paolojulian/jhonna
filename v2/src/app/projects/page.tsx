@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       className={cn(
         'grid auto-rows-[1fr] container',
         'gap-4 lg:gap-4',
-        'grid-cols-1 lg:grid-cols-3'
+        'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
       )}
     >
       <AppProjectCard

@@ -14,9 +14,11 @@ type ContactFormValues = {
   message: string;
 };
 
-type ContactCardProps = object;
+type ContactCardProps = {
+  className?: string;
+};
 
-const ContactCard: FC<ContactCardProps> = () => {
+const ContactCard: FC<ContactCardProps> = ({ className }) => {
   const [isSending, setIsSending] = useState<boolean>(false);
   const [isSent, setIsSent] = useState<boolean>(false);
   const [form, setForm] = useState<ContactFormValues>({
@@ -72,7 +74,7 @@ const ContactCard: FC<ContactCardProps> = () => {
   };
 
   return (
-    <AppBentoBox className='row-span-2 bg-lavender-mist p-6'>
+    <AppBentoBox className={cn('row-span-2 bg-lavender-mist p-6', className)}>
       <form onSubmit={handleSubmit} className='flex flex-col gap-6 h-full'>
         <div className='flex flex-row justify-end gap-2'>
           <a className='size-[28px] rounded-full bg-peacoat flex items-center justify-center'>
