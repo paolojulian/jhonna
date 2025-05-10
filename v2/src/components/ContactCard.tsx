@@ -5,6 +5,7 @@ import AppTextInput from '@/components/AppTextInput';
 import AppTypography from '@/components/AppTypography';
 import { EmailIcon, LinkedInIcon, PhoneIcon } from '@/components/icons';
 import ArrowUpperRightIcon from '@/components/icons/ArrowUpperRightIcon';
+import { CONTACT_LINKS } from '@/config/contacts.constants';
 import cn from '@/utils/cn';
 import { FC, FormEvent, useEffect, useState } from 'react';
 
@@ -76,14 +77,44 @@ const ContactCard: FC<ContactCardProps> = ({ className }) => {
   return (
     <AppBentoBox className={cn('row-span-2 bg-lavender-mist p-6', className)}>
       <form onSubmit={handleSubmit} className='flex flex-col gap-6 h-full'>
-        <div className='flex flex-row justify-end gap-2'>
-          <a className='size-[28px] rounded-full bg-peacoat flex items-center justify-center'>
+        <div className='flex flex-row ml-auto gap-2 group transition-all w-fit'>
+          <a
+            className={cn(
+              'size-[32px] rounded-full bg-peacoat flex items-center justify-center',
+              'transition-all',
+              'group-hover:opacity-50',
+              'hover:opacity-100',
+              'hover:scale-110'
+            )}
+            href={CONTACT_LINKS.linkedin}
+            target='_blank'
+          >
             <LinkedInIcon />
           </a>
-          <a className='size-[28px] rounded-full bg-peacoat flex items-center justify-center'>
+          <a
+            className={cn(
+              'size-[32px] rounded-full bg-peacoat flex items-center justify-center',
+              'transition-all',
+              'group-hover:opacity-50',
+              'hover:opacity-100',
+              'hover:scale-110'
+            )}
+            href={CONTACT_LINKS.email}
+            target='_blank'
+          >
             <EmailIcon />
           </a>
-          <a className='size-[28px] rounded-full bg-peacoat flex items-center justify-center'>
+          <a
+            className={cn(
+              'size-[32px] rounded-full bg-peacoat flex items-center justify-center',
+              'transition-all',
+              'group-hover:opacity-50',
+              'hover:opacity-100',
+              'hover:scale-110'
+            )}
+            href={CONTACT_LINKS.phone}
+            target='_blank'
+          >
             <PhoneIcon />
           </a>
         </div>
