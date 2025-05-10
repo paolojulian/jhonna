@@ -12,11 +12,14 @@ export async function generateStaticParams() {
 }
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{
+    slug: string
+  }>;
 }
 
-export default function Home({ params }: Props) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectViewPage({ params }: Props) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) return notFound();
 
