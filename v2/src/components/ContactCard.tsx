@@ -100,7 +100,7 @@ const ContactCard: FC<ContactCardProps> = () => {
 
         <AppTypography
           variant='body-wide'
-          className='border-y-3 border-peacoat py-1 text-center text-peacoat'
+          className='md:hidden xl:block border-y-3 border-peacoat py-1 text-center text-peacoat'
         >
           MON - FRI • 9AM - 6PM
         </AppTypography>
@@ -131,6 +131,7 @@ const ContactCard: FC<ContactCardProps> = () => {
             id='message'
             name='message'
             placeholder='...'
+            rows={2}
             value={form.message}
             required
           />

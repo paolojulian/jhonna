@@ -1,91 +1,140 @@
 import CVCard from '@/app/_sections/CVCard';
-import AppBentoBox from '@/components/AppBentoBox';
+import AboutMeCard from '@/components/AboutMeCard';
 import AppProjectCard from '@/components/AppProjectCard';
-import AppTypography from '@/components/AppTypography';
 import ContactCard from '@/components/ContactCard';
-import Image from 'next/image';
+import ProfilePictureCard from '@/components/ProfilePictureCard';
+import TaglineCard from '@/components/TaglineCard';
+import cn from '@/utils/cn';
+
+const projectCards = [
+  {
+    imageLink: '/images/projects/sce.png',
+    subtitle: 'BEAUTY PRODUCTS AND SERVICES',
+    title: 'SKIN CARE ESSENTIALS',
+    link: '/projects/sce',
+  },
+  {
+    imageLink: '/images/projects/ovk.png',
+    subtitle: 'INSPECTION GUIDELINES',
+    title: 'OVK PLAN',
+    link: '/projects/ovk',
+  },
+  {
+    imageLink: '/images/projects/ccc.png',
+    subtitle: 'HEALTHCARE SERVICES',
+    title: 'CITY CARE COMPANIONS',
+    link: '/projects/ccc',
+  },
+  {
+    imageLink: '/images/projects/beauty.png',
+    subtitle: 'PERSONAL PROJECT',
+    title: 'BEAUTY PRODUCTS',
+    link: '/projects/beauty',
+  },
+  {
+    imageLink: '/images/projects/applete.png',
+    subtitle: 'SPORTS EVENT BOOKING',
+    title: 'APPLETE',
+    link: '/projects/applete',
+  },
+  {
+    imageLink: '/images/projects/hotel-booking.png',
+    subtitle: 'BOOKING & RESERVATION',
+    title: 'HOTEL BOOKING APP',
+    link: '/projects/hotel-booking',
+  },
+];
 
 export default function Home() {
   return (
     <>
-      <div className='grid grid-cols-3 auto-rows-[1fr] gap-4 container'>
+      {/* Desktop */}
+      <div
+        className={cn('hidden lg:grid', 'grid-cols-3', 'gap-4', 'container')}
+      >
         {/* <!-- Row 1 --> */}
-        <AppBentoBox className='aspect-square w-full relative bg-linen'>
-          <Image
-            alt='Jhonna'
-            src='/images/grace.png'
-            fill
-            objectPosition='center'
-          />
-        </AppBentoBox>
-        <AppBentoBox className='col-span-2 relative bg-honeydew'>
-          <Image
-            alt='Jhonna'
-            src='/images/ui-ux-designer.png'
-            fill
-            objectPosition='center'
-          />
-        </AppBentoBox>
+        <ProfilePictureCard />
+        <TaglineCard className='col-span-2' />
 
         {/* <!-- Row 2 --> */}
-        <AppProjectCard
-          imageLink='/images/projects/sce.png'
-          subtitle='BEAUTY PRODUCTS AND SERVICES'
-          title='SKIN CARE ESSENTIALS'
-          link='/projects/sce'
-        />
-
-        <AppProjectCard
-          imageLink='/images/projects/ovk.png'
-          subtitle='INSPECTION GUIDELINES'
-          title='OVK PLAN'
-          link='/projects/ovk'
-        />
+        <AppProjectCard {...projectCards[0]} />
+        <AppProjectCard {...projectCards[1]} />
 
         <div className='flex flex-col gap-4 h-full'>
-          <AppBentoBox className='flex flex-col gap-2 bg-linen p-6 h-1/2'>
-            <AppTypography as='h2' variant={'heading-sm'}>
-              ABOUT ME...
-            </AppTypography>
-            <AppTypography className='text-neutral-600'>
-              {`I'm a UI/UX Designer with 1+ year of experience creating clean,
-              user-friendly designs that are easy to implement by developers and improve real
-              user flows.`}
-            </AppTypography>
-          </AppBentoBox>
+          <AboutMeCard />
           <CVCard />
         </div>
 
         {/* <!-- Row 3 --> */}
-        <AppProjectCard
-          imageLink='/images/projects/ccc.png'
-          subtitle='HEALTHCARE SERVICES'
-          title='CITY CARE COMPANIONS'
-          link='/projects/ccc'
-        />
-
-        <AppProjectCard
-          imageLink='/images/projects/beauty.png'
-          subtitle='PERSONAL PROJECT'
-          title='BEAUTY PRODUCTS'
-          link='/projects/beauty'
-        />
+        <AppProjectCard {...projectCards[2]} />
+        <AppProjectCard {...projectCards[3]} />
 
         <ContactCard />
 
-        <AppProjectCard
-          imageLink='/images/projects/applete.png'
-          subtitle='SPORTS EVENT BOOKING'
-          title='APPLETE'
-          link='/projects/applete'
-        />
+        <AppProjectCard {...projectCards[4]} />
+        <AppProjectCard {...projectCards[5]} />
+      </div>
 
-        <AppProjectCard
-          imageLink='/images/projects/hotel-booking.png'
-          subtitle='BOOKING & RESERVATION'
-          title='HOTEL BOOKING APP'
-          link='/projects/hotel-booking'
-        />
+      {/* Tablet */}
+      <div className='hidden md:block lg:hidden'>
+        <div className='grid grid-cols-1 gap-3 container'>
+          <div className='grid grid-cols-3 gap-3'>
+            <ProfilePictureCard />
+            <TaglineCard className='col-span-2' />
+          </div>
+
+          <div className='grid grid-cols-2 gap-3'>
+            <AboutMeCard />
+            <CVCard />
+          </div>
+          <div className={'grid grid-cols-2 gap-3'}>
+            {projectCards.map((projectCard) => (
+              <AppProjectCard
+                key={projectCard.title}
+                {...projectCard}
+                className='min-w-[40vw] snap-start shrink-0'
+              />
+            ))}
+          </div>
+          <ContactCard />
+        </div>
+      </div>
+
+      {/* Mobile */}
+      <div className='block md:hidden'>
+        <div className='grid grid-cols-1 gap-3 container'>
+          <div className='grid grid-cols-2 gap-3'>
+            <ProfilePictureCard />
+            <TaglineCard className='col-span-1' />
+          </div>
+
+          <div className='flex flex-col gap-3'>
+            <AboutMeCard />
+            <CVCard />
+          </div>
+        </div>
+        <div className='mt-3 w-screen'>
+          <div
+            className={cn(
+              'flex flex-row overflow-x-auto gap-3',
+              'no-scroll scroll-smooth px-3 scroll-px-3 snap-x snap-mandatory'
+            )}
+            style={{
+              scrollPaddingInline: '2rem',
+            }}
+          >
+            {projectCards.map((projectCard) => (
+              <AppProjectCard
+                key={projectCard.title}
+                {...projectCard}
+                className='min-w-[75vw] md:min-w-[60vw] snap-start shrink-0'
+              />
+            ))}
+          </div>
+        </div>
+        <div className='mt-3 container'>
+          <ContactCard />
+        </div>
       </div>
     </>
   );

@@ -15,10 +15,8 @@ const CVCard: FC<CVCardProps> = () => {
       download='Jhonna Mae Gines.pdf'
     >
       <AppBentoBox
-        // className='flex-1 px-6 pt-6 space-y-4 bg-peach'
         className={cn(
-          'w-full h-full flex-1 flex flex-col gap-4 relative overflow-hidden group',
-          'px-3 lg:px-6 pt-3 lg:pt-4',
+          'w-full h-full flex-1 flex flex-col gap-4 px-4 lg:px-6 pt-4 relative overflow-hidden group',
           'hover:outline-1 hover:outline-black transition-colors',
           'bg-peach'
         )}
@@ -35,7 +33,7 @@ const CVCard: FC<CVCardProps> = () => {
           <Image
             alt='Jhonna'
             src='/images/cv.png'
-            className='object-left lg:object-center object-cover'
+            className='object-center object-cover'
             fill
           />
         </div>
