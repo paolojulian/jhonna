@@ -14,10 +14,9 @@ const NavbarSection: FC<NavbarSectionProps> = () => {
   return (
     <>
       {/* desktop */}
-      <nav className={cn(
-        'py-6 lg:py-10',
-        'mx-auto w-fit z-20'
-      )}>
+      <nav
+        className={cn('py-6 lg:py-10', 'mx-auto w-fit z-20', 'hidden lg:block')}
+      >
         <div className='rounded-full bg-neutral-100 p-2 flex flex-row'>
           <NavbarLink
             title='Home'
@@ -41,7 +40,34 @@ const NavbarSection: FC<NavbarSectionProps> = () => {
           />
         </div>
       </nav>
-      {/* <NavbarSectionMobile /> */}
+
+      {/* mobile */}
+      <div className='block lg:hidden fixed inset-x-0 bottom-0 p-4 z-20'>
+        <nav className={cn('mx-auto w-fit shadow-2xl rounded-full')}>
+          <div className='rounded-full bg-neutral-100 p-2 flex flex-row'>
+            <NavbarLink
+              title='Home'
+              href={Routes.home()}
+              isActive={pathname === Routes.home()}
+            />
+            <NavbarLink
+              title='Projects'
+              href={Routes.projects()}
+              isActive={pathname === Routes.projects()}
+            />
+            <NavbarLink
+              title='About'
+              href={Routes.about()}
+              isActive={pathname === Routes.about()}
+            />
+            <NavbarLink
+              title='Contact'
+              href={Routes.contact()}
+              isActive={pathname === Routes.contact()}
+            />
+          </div>
+        </nav>
+      </div>
     </>
   );
 };
