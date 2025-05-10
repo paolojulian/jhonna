@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+:root {
+  --black: #2a354b;
+  --white: #f3f4f7;
+  --red: #ff6c6c;
+  --peacoat: #2a354b;
+  --honeydew: #e9f5db;
+  --lavender-mist: #dfe7fd;
+  --linen: #fff2e8;
+  --azure-mist: #e8f8fb;
+  --peach: #ffebc2;
+}
+
+@theme {
+  --font-headings: 'AvantGarde', 'sans-serif';
+  --font-helvetica: 'HelveticaNeue', 'sans-serif';
+}
+
+@theme inline {
+  --color-background: var(--white);
+  --color-foreground: var(--black);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-red: var(--red);
+  --color-peacoat: var(--peacoat);
+  --color-honeydew: var(--honeydew);
+  --color-lavender-mist: var(--lavender-mist);
+  --color-linen: var(--linen);
+  --color-azure-mist: var(--azure-mist);
+  --color-peach: var(--peach);
+}
+
+@utility container {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: 0.75rem;
+
+  @media (min-width: 1024px) {
+    padding-inline: 2rem;
+  }
+}
+
+.no-scroll::-webkit-scrollbar {
+  height: 0;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'AvantGarde', sans-serif;
+}

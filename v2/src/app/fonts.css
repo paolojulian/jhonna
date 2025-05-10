@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'AvantGarde';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/HelveticaNeueRoman.otf');
+}
+
+@font-face {
+  font-family: 'AvantGarde';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/AvantGarde/AvantGardeMedium.woff2') format('woff2');
+}
