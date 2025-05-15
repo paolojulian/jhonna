@@ -66,19 +66,19 @@ export default async function ProjectViewPage({ params }: Props) {
           )}
         </AppTypography>
       </div>
-      <div className='w-full md:container overflow-x-auto md:overflow-x-visible no-scroll px-3 scroll-px-3'>
+      <div className='w-full lg:container overflow-x-auto lg:overflow-x-visible no-scroll px-3 scroll-px-3'>
         <div
           className={cn(
-            'flex md:grid',
-            'w-fit md:w-full',
-            'gap-2 md:gap-4',
-            'flex-row md:grid-cols-3'
+            'flex lg:grid',
+            'w-fit lg:w-full',
+            'gap-2 lg:gap-4',
+            'flex-row lg:grid-cols-3'
           )}
         >
           {project.images.map((image) => (
             <div
               key={image.id}
-              className='aspect-square relative rounded-2xl overflow-hidden md:shadow-2xl w-[75vw] md:w-full'
+              className='aspect-square relative rounded-2xl overflow-hidden lg:shadow-2xl size-[75vw] sm:size-[60vw] lg:w-full lg:h-auto'
             >
               <Image alt={image.id} src={image.src} fill />
             </div>
