@@ -17,8 +17,9 @@ export const projects: Project[] = [
     slug: 'sce',
     title: 'Skin Care Essentials',
     subtitle: 'Hair Studio, Aesthetic Clinic & Clinical Services',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: `Skin Care Essentials is based in London, United Kingdom. It offers three services: an aesthetic clinic, a hair studio, and clinical services. The aesthetic clinic focuses on skin boosting, non-surgical treatments to enhance skin health and beauty. The hair studio offer care hair treatments and styling for every hair types. Clinical services include at home blood test kits for accessible health tracking. 
+
+UI design is my main focus in this project, plus I get to design eye catching monthly promos for the website and their social media.`,
     address: 'London, United Kingdom',
     projectLink: 'https://skincareessentials.co.uk/',
     images: [
@@ -40,8 +41,9 @@ export const projects: Project[] = [
     slug: 'ccc',
     title: 'City Care Companions',
     subtitle: 'Domiciliary Care & Temporary Staffing Services',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: `City Care Companions is a healthcare service based in Wandsworth, London, United Kingdom. there offers personalized home care services, including assisted living, live-in support, specialized medical care, and end-of-life assistance. We also provide temporary healthcare staffing to support care homes and private individuals. 
+
+As the UI Designer, I collaborated with the Project Manager and developers to ensure a seamless user experience. I also designed the company logo for City Care Companions.`,
     address: 'London, United Kingdom',
     projectLink: 'https://citycarecompanions.co.uk/',
     images: [
@@ -63,8 +65,7 @@ export const projects: Project[] = [
     slug: 'applete',
     title: 'Applete',
     subtitle: 'Sports Event Booking',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: `Applete is a sports app where you can join games and activities, participate in tournaments, or easily reserve sports courts. My role in this project is UI Designer. I collaborated with the Project Manager and developers to create a user-friendly experience that’s easy to understand.`,
     projectLink:
       'https://play.google.com/store/apps/details?id=com.applete.app&hl=en',
     images: [
@@ -86,8 +87,7 @@ export const projects: Project[] = [
     slug: 'ovk',
     title: 'OVK Plan',
     subtitle: 'Inspection Guidelines',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: `The OVK Plan, based in Sweden, Europe, serves as an inspection guideline that promotes consistency and fairness by standardizing evaluation procedures across different inspectors. To simplify their workflow and save time managing multiple forms, I created a UI design that makes tasks easier and more organized.`,
     address: 'Sweden, Europe — App is for private use',
     images: [
       {
@@ -108,8 +108,9 @@ export const projects: Project[] = [
     slug: 'hotel-booking',
     title: 'Hotel Booking App',
     subtitle: 'Booking & Reservation',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: `Hotel booking app is the process of reserving accommodation at a hotel in advance. This ensures that you have a place to stay during your travel or staycation.
+
+I chose hotel booking as one of my personal projects because I understand the key information users need before booking a room, such as availability, pricing, and amenities. I’ve also booked rooms myself several times, so I’m familiar with the process.`,
     projectLink:
       'https://www.figma.com/design/Os5RYokIkkoUAsxOYhimuk/Hotel-Booking-and-Reservation?m=auto&t=8nJ9ZtTNaHH3nQcJ-6',
     projectLinkText: 'Figma — Personal Project',
@@ -132,8 +133,9 @@ export const projects: Project[] = [
     slug: 'beauty',
     title: 'Beauty Products',
     subtitle: 'Ecommerce',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry‘s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: `Online beauty products are items you can order online and have delivered to your home.
+
+As someone who enjoys browsing beauty products online, I decided to redesign a beauty e-commerce page for my personal project. This made it easier for me to create a site that’s simple and enjoyable to use. `,
     projectLink:
       'https://www.figma.com/design/WBpmJaE3LO9YATWcAVi7JM/Beauty-Products?node-id=1282-12225&p=f&t=ZiHYw1yIYK5L9065-0',
     projectLinkText: 'Figma — Personal Project',
